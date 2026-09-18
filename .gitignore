@@ -1,0 +1,21 @@
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.mobileprovision
+node_modules/
+.venv/
+venv/
+__pycache__/
+.DS_Store
+logs/
+tmp/
+secrets/
+credentials/
+
+# Runtime volumes created by the SparkyFitness compose stack
+infra/sparkyfitness/postgresql/
+infra/sparkyfitness/uploads/
+infra/sparkyfitness/backup/
