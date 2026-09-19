@@ -23,7 +23,7 @@ set -euo pipefail
 BASE_URL="${BASE_URL:-http://localhost:3004}"
 SUFFIX="${1:-$(date +%s)}"
 EMAIL="motioncoach.test+${SUFFIX}@example.invalid"
-PASSWORD="MotionCoachTestPass123!"
+PASSWORD="${TEST_USER_PASSWORD:-$(openssl rand -base64 18)}"
 NAME="MotionCoach Test User"
 
 echo "Creating synthetic test user: ${EMAIL}" >&2
